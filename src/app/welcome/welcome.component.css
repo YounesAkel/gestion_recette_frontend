@@ -1,0 +1,73 @@
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.main{
+    margin-top: 109px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main h2{
+    font-size: 72px;
+    text-transform: uppercase;
+
+}
+
+.main h1{
+    font-size: 120px;
+    color: #4400ff;
+    text-transform: uppercase;
+}
+.botton{
+    text-decoration: none;
+    border: 1px solid #4400ff;
+    color:#4400ff;
+    padding: 15px 30px;
+    margin-top: 45px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.botton:hover{
+    color: white;
+    background-color: #4400ff;
+    transform: rotate(5deg);
+}
+
+/*-----------------------------css responsive---------------------------------------*/
+/*style pour une tablette*/
+@media (max-width:900px){
+
+
+.main h2{
+    font-size: 60px;
+}
+.main h1{
+    font-size: 80px;
+}
+
+
+}
+
+@media(max-width:400px){
+    .main h2{
+        font-size: 50px;
+    }
+    .main h1{
+        font-size: 40px !important;
+    }
+   
+}
+
+/*---------------style pour smartphone---------------------*/
+@media (max-width:750px){
+
+.main h2{
+    font-size: 50px;
+}
+}
+
+
+
+

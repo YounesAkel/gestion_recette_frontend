@@ -1,0 +1,172 @@
+
+a{color: white;}
+.opened{
+    right: 40px;
+}
+.containeer{
+    background: linear-gradient(#1e95b3de,#21dd95de),url('images/recette.jpg');
+    min-height: 100vh;/*la logueur minimum doit prondre tous l'ecran*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+ margin: 0;
+     padding: 0;
+ }
+
+nav{
+    padding: 2% 6%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-link{
+    /*background-color: aqua;*/
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    text-transform: uppercase;
+    font-size: 40px;
+    
+}
+.logo a{
+    text-decoration: none;
+}
+.logo span {
+    color: #4400ff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: auto;/*centrer l'élément*/
+}
+
+nav ul li{
+    margin: 0 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.sociale a{
+    margin: 0 10px;
+    transition: 0.5s;
+    
+}
+nav ul li a:hover{
+    color: #4400ff;
+}
+nav ul li a::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width:  0;
+    background-color: #4400ff;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+.sociale a i{
+    transition: 0.5s;
+}
+.sociale a i:hover{
+    color: #4400ff;
+}
+
+.sociale a:first-child, .sociale a:last-child{
+
+    display: none;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*-----------------------------css responsive---------------------------------------*/
+/*style pour une tablette*/
+@media (max-width:900px){
+
+.sociale{
+position: fixed;
+right: 0;
+top: 0;
+display: flex;
+flex-direction: column;
+height: 100vh;
+width: 40px;
+background-color: black;
+justify-content: center;
+align-items: center;
+border-left: 1px solid rgb(44,44,44);
+}
+.sociale a{
+    margin: 10px 0;
+}
+
+}
+
+
+
+/*---------------style pour smartphone---------------------*/
+@media (max-width:750px){
+    
+.nav-link{
+    position: absolute;
+
+}
+.nav-link ul {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #000000de;
+    flex-direction: column;/*rend compt que ul contient deja display flex onest pas besoin de le remontionner*/
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid rgb(44,44,44);
+    transition: right 0.5s;
+}
+.nav-link ul li{
+    flex-basis: 40px;/*la base des dimensiens*/
+    flex-grow: 1;/*les li peuvent s'agrandir en prolongement la taille de lafenetre*/
+    /*flex-shrink: 0;/*les li peuvent s'agrandir en prolongement la taille de lafenetre*/
+     max-height: 80px;
+     align-items: center;
+}
+.nav-link ul.opened{
+    right: 40px;
+}
+.logo{
+    text-align: center;
+    flex: 1;
+}
+
+.sociale a:first-child, .sociale a:last-child{
+  
+    position: fixed;
+    top: 0;
+}
+
+.sociale a:last-child{
+    display: block;
+    top: 0;
+}
+ul.opened ~ .sociale a:last-child{
+    display: none;
+}
+ul.opened ~ .sociale a:first-child{
+    display: block;
+}
+
+}
+
+
+
+

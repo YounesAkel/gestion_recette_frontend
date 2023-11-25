@@ -1,0 +1,40 @@
+
+
+<div class="containeer">
+
+    <nav>
+        <h1 class="logo">gestion <br><span>recette</span></h1>
+        <div class="nav-link" >
+            <ul id="menu" [ngClass]="{'opened':display==true}">
+                <li><a routerLink="/welcom">Homme</a></li> 
+               <!-- <li><a routerLink="updatecollab"> update</a></li> -->
+                <li><a routerLink="#">About us</a></li>
+                <li><a routerLink="#">Contact us </a></li>
+                <li><a routerLink="#">Our team</a></li>
+
+            </ul>
+            <div class="sociale" >
+                <a routerLink="#" (click)="showHideMenu()"><i class="fa fa-times"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100070193500037&mibextid=b06tZ0" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/sqli/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://twitter.com/sqli_uk_me?t=2j0hAYQN749qMCtxtYm_Eg&s=09" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://instagram.com/sqlimaroc?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fa fa-instagram"></i></a>  
+                <a routerLink="#" (click)="showHideMenu()"><i class="fa fa-bars"></i></a>
+            </div>
+        
+        </div>
+        
+    </nav>
+    <router-outlet></router-outlet>
+ </div>
+
+
+   
+ 
+ 
+ 
+
+
+
+
+
